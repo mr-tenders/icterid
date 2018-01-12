@@ -1,0 +1,25 @@
+{
+  "name": "icterid",
+  "version": "0.0.1",
+  "description": "Icterid Workflow Server",
+  "main": "dist/server.js",
+  "repository": "https://github.com/mr-tenders/icterid",
+  "author": "Samantha Enders",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.1.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "build": "babel src -d dist",
+    "start": "node dist/server.js"
+  }
+}
