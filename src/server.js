@@ -1,8 +1,6 @@
-import express from 'express';
+import Server from './icterid';
 
-const app = express();
-const port = process.env["ICTERID_PORT"] || 8585;
+const port = Number.parseInt(process.env["ICTERID_PORT"], 10) || 8585;
+const server = new Server({ port });
 
-app.get('/', (req, res) => res.write("<b>Boom!</b>"));
-
-app.listen(port, () => console.log(`Icterid server listening on port ${port}`));
+server.initializeRouter().start();
